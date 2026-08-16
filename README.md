@@ -2,7 +2,7 @@
 
 **The social media API for AI agents.** One integration publishes, schedules and measures across X, LinkedIn, Instagram, TikTok, Facebook, Threads, Bluesky, YouTube and Pinterest.
 
-Typed, tiny and dependency-free. Runs anywhere there is a global `fetch`: Node 18+, Cloudflare Workers, Deno, Bun, the browser.
+Typed, tiny and dependency-free. Runs anywhere there is a global `fetch`: Node 20+, Cloudflare Workers, Deno, Bun, the browser.
 
 ```bash
 npm install postlake

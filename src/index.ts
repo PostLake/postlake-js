@@ -258,7 +258,10 @@ class Media {
 /** The header every PostLake webhook delivery is signed with. */
 export const WEBHOOK_SIGNATURE_HEADER = "postlake-signature";
 
-// HMAC-SHA256 → lowercase hex, via Web Crypto (works in Node 18+, Workers, browsers).
+// HMAC-SHA256 to lowercase hex, via Web Crypto. NOTE: globalThis.crypto only
+// became available unflagged in Node 19, so this needs Node 20+ (18 is EOL as
+// of April 2025). Workers, Deno, Bun and browsers all have it natively. CI
+// runs the matrix that proves this rather than trusting the claim.
 async function hmacSha256Hex(secret: string, message: string): Promise<string> {
   const enc = new TextEncoder();
   const key = await crypto.subtle.importKey("raw", enc.encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
