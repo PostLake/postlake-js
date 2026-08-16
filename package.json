@@ -1,0 +1,51 @@
+{
+  "name": "postlake",
+  "version": "1.0.0",
+  "description": "Official TypeScript SDK for PostLake. One API to publish, schedule and track social posts across 9 platforms.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://postlake.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PostLake/postlake-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PostLake/postlake-js/issues"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "postlake",
+    "social media",
+    "api",
+    "mcp",
+    "agents",
+    "scheduling",
+    "analytics"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
