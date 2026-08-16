@@ -21,9 +21,9 @@ import type {
   PostAnalytics,
   ValidatePostResult,
   WebhookEndpoint,
-} from "./types";
+} from "./types.js";
 
-export * from "./types";
+export * from "./types.js";
 
 export type FetchLike = (input: string, init?: RequestInit) => Promise<Response>;
 

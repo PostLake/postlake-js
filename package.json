@@ -1,6 +1,6 @@
 {
   "name": "postlake",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official TypeScript SDK for PostLake. One API to publish, schedule and track social posts across 9 platforms.",
   "type": "module",
   "main": "./dist/index.js",
@@ -29,7 +29,8 @@
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "prepublishOnly": "npm run build && npm test"
+    "prepublishOnly": "npm run build && npm test && npm run smoke",
+    "smoke": "npm run build && node smoke.mjs"
   },
   "keywords": [
     "postlake",
