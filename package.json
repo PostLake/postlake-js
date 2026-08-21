@@ -20,10 +20,10 @@
   "homepage": "https://postlake.dev",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PostLake/postlake-js.git"
+    "url": "git+https://github.com/PostLake/postlake-node.git"
   },
   "bugs": {
-    "url": "https://github.com/PostLake/postlake-js/issues"
+    "url": "https://github.com/PostLake/postlake-node/issues"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
